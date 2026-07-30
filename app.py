@@ -41,7 +41,7 @@ else:
     st.info("PASS ALL API KEYS")
 
 # multiselect option
-options = ["Delhi", "Mumbai", "Pune", "Banglore", "Gurugram"/"Gurgaon"]
+options = ["Delhi", "Mumbai", "Pune", "Banglore", "Gurugram/Gurgaon"]
 location= st.sidebar.multiselect("Select Location",
                                  options = options)
 profile_op = ["Data Analysts", "AI Engineer", "Gen AI Developer", "Full=Stack Developer", "Data Scientist"]

@@ -39,6 +39,14 @@ elif all(all_API):
     st.success("API KEYS LOADED SUCCESSFULLY")
 else:
     st.info("PASS ALL API KEYS")
+
+# multiselect option
+options = ["Delhi", "Mumbai", "Pune", "Banglore", "Gurugram"/"Gurgaon"]
+location= st.sidebar.multiselect("Select Location",
+                                 options = options)
+profile_op = ["Data Analysts", "AI Engineer", "Gen AI Developer", "Full=Stack Developer", "Data Scientist"]
+profile = st.sidebar.multiselect("Select Job Profile",
+                                 options = profile_op)
     
 
 

@@ -27,9 +27,9 @@ st.sidebar.image("bg.png")
 
 
 #===========API KEYS=========
-GOOGLE_API_KEY = "AQ.Ab8RN6KjlCmWBR4UkH3bWHnXxV5rUZ_yg5Igzd0hbd_p0UNUbw"
-GROQ_API_KEY = "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"
-TAVILY_API_KEY = "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"
+GOOGLE_API_KEY = st.sidebar.text_input("Gemini-API", type = "password")
+GROQ_API_KEY = st.sidebar.text_input("Groq-API", type = "password")
+TAVILY_API_KEY = st.sidebar.text_input("Tavily-API", type = "password")
 
 
 #============MODEL==============

@@ -87,13 +87,17 @@ def main_agent(agent, query):
   orchestrate sub agents"""
 
   #Giving prompt to create detailed prompt for code generation
-  prompt = """Make the resume visually attractive, modern, premium, and professional.
-Use a sophisticated dark gradient theme with a deep navy/black background,
-combined with multiple elegant accent colors such as electric blue, royal purple,
-magenta, and coral. Use smooth gradients, subtle glowing accents, colorful section
-highlights, modern typography, soft borders, and minimal glassmorphism effects.
-Keep the colors balanced and professional, with a strong visual hierarchy.
-Avoid excessive neon effects, rainbow-style coloring, or an overly flashy design."""
+  prompt = """You are AI Assistant and below given is a prompt, your task is to give detailed prompt for this.
+You are professional Resume generator where user will give their personal info,
+you have to create detailed Resume for students or professional one,
+it must be with dynamic UI and UX and with advanced CSS Professional Designing.
+
+Make the resume visually attractive, modern, premium, and professional.
+Use a sophisticated dark theme with a rainbow theme. Use subtle gradients, clean typography,
+soft borders, and minimal glow effects for a polished tech-style look.
+
+Make sure to give output in HTML format only.
+No markdowns allowed."""
 
   response = agent.invoke({"messages":[{'role':'user','content':prompt}]})
   detailed_prompt= response['messages'][-1].content[-1]['text']

@@ -93,7 +93,7 @@ you have to create detailed Resume for students or professional one,
 it must be with dynamic UI and UX and with advanced CSS Professional Designing.
 
 Make the resume visually attractive, modern, premium, and professional.
-Use a sophisticated dark theme with a rainbow theme. Use subtle gradients, clean typography,
+Use a sophisticated dark theme with a rainbow theme and text should be in bright colour so that it is visisble. Use subtle gradients, clean typography,
 soft borders, and minimal glow effects for a polished tech-style look.
 
 Make sure to give output in HTML format only.

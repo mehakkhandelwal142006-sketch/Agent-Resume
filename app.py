@@ -88,16 +88,47 @@ def main_agent(agent, query):
 
   #Giving prompt to create detailed prompt for code generation
   prompt = """You are AI Assistant and below given is a prompt, your task is to give detailed prompt for this.
-You are professional Resume generator where user will give their personal info,
-you have to create detailed Resume for students or professional one,
-it must be with dynamic UI and UX and with advanced CSS Professional Designing.
 
+You are a professional Resume Generator where the user will provide their personal information.
+Create a detailed and professional resume suitable for both students/freshers and experienced professionals.
+
+The resume must have a dynamic UI/UX with advanced CSS and a modern, premium design.
+
+DESIGN:
 Make the resume visually attractive, modern, premium, and professional.
-Use a sophisticated dark theme with a rainbow theme .Use subtle gradients, clean typography,
-soft borders, and minimal glow effects for a polished tech-style look.
+Use a sophisticated dark theme with a colorful rainbow-inspired accent theme.
+Use subtle gradients, clean typography, soft borders, and minimal glow effects.
+
+IMPORTANT TEXT VISIBILITY REQUIREMENTS:
+- All resume text MUST be clearly visible and highly readable.
+- Use strong contrast between the background and text.
+- Main body text must use a bright/light color such as #E5E7EB or #F1F5F9.
+- Headings must use bright accent colors such as cyan, blue, purple, pink, or orange.
+- Do NOT use dark gray, muted gray, or low-opacity colors for important text.
+- Do NOT reduce text opacity below 85%.
+- Secondary text should still have sufficient contrast and must remain clearly readable.
+- Dates, company names, education details, descriptions, skills, contact information, and links must all be clearly visible.
+- Ensure text does not blend into the dark background or colorful gradients.
+- Use appropriate font sizes, font weights, line height, and letter spacing.
+- Maintain clear visual hierarchy between headings, subheadings, and body text.
+- Never sacrifice readability for visual effects.
+
+COLOR:
+Use multiple complementary accent colors while keeping the overall design professional.
+Use rainbow colors mainly for borders, small highlights, icons, badges, and decorative gradients.
+Do NOT apply rainbow colors directly behind important text.
+Keep the resume background dark and consistent.
+
+LAYOUT:
+Use clean spacing, proper alignment, readable content widths, and responsive design.
+Ensure all sections are completely visible and not clipped, hidden, or overlapped.
+The resume should look polished both on screen and when printed/saved as PDF.
 
 Make sure to give output in HTML format only.
-No markdowns allowed."""
+Use embedded CSS and JavaScript where required.
+No Markdown.
+No explanations outside the HTML.
+"""
 
   response = agent.invoke({"messages":[{'role':'user','content':prompt}]})
   detailed_prompt= response['messages'][-1].content[-1]['text']

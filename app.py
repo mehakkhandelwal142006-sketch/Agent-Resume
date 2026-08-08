@@ -97,7 +97,7 @@ def main_agent(agent, query):
   it must be with dynamic UI and UX and,
   with advanced CSS Professional Designing
   Make sure to give output in HTML format only
-  resume should be in rainbow color
+  resume should be in rainbow color and in dark theme
   no markdowns allowed"""
 
   response = agent.invoke({"messages":[{'role':'user','content':prompt}]})
